@@ -1,0 +1,83 @@
+/* ===== Variables: paleta i tipografia coherents ===== */
+:root {
+    --blau: #1d4f91;
+    --blau-fosc: #14376a;
+    --fons: #f3f5f9;
+    --text: #1f2937;
+    --gris: #d1d5db;
+    --error: #b91c1c;
+    --error-fons: #fee2e2;
+    --ok: #166534;
+    --ok-fons: #dcfce7;
+    --radi: 8px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    color: var(--text);
+    background: var(--fons);
+}
+
+.contenidor { width: 100%; max-width: 760px; margin: 0 auto; padding: 0 1rem; }
+main.contenidor { flex: 1; padding-top: 2rem; padding-bottom: 2rem; }
+
+/* ===== Capçalera i menú ===== */
+.capcalera { background: var(--blau); color: #fff; }
+.capcalera-interior { display: flex; justify-content: space-between; align-items: center; padding: 1rem; }
+.logo { font-weight: 700; font-size: 1.15rem; }
+.menu a { color: #fff; text-decoration: none; margin-left: 1.25rem; padding-bottom: 2px; border-bottom: 2px solid transparent; }
+.menu a:hover, .menu a:focus { border-bottom-color: #fff; }
+
+/* ===== Peu ===== */
+.peu { background: var(--blau-fosc); color: #dbe5f5; text-align: center; padding: 1rem 0; font-size: .9rem; }
+
+/* ===== Targeta de contingut ===== */
+.targeta { background: #fff; border: 1px solid var(--gris); border-radius: var(--radi); padding: 2rem; box-shadow: 0 2px 6px rgba(0, 0, 0, .06); }
+h1 { margin-top: 0; color: var(--blau-fosc); }
+a { color: var(--blau); }
+
+/* ===== Botons i enllaços destacats ===== */
+.boto {
+    display: inline-block;
+    background: var(--blau);
+    color: #fff;
+    border: 0;
+    border-radius: var(--radi);
+    padding: .75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+.boto:hover, .boto:focus { background: var(--blau-fosc); }
+
+/* ===== Formulari ===== */
+.camp { margin-bottom: 1.25rem; }
+.camp label { display: block; font-weight: 600; margin-bottom: .35rem; }
+.camp input {
+    width: 100%;
+    padding: .65rem .75rem;
+    font-size: 1rem;
+    border: 1px solid #9ca3af;
+    border-radius: var(--radi);
+}
+.camp input:focus { outline: 3px solid #bfd4f2; border-color: var(--blau); }
+
+/* ===== Errors ben visibles ===== */
+.camp-error input { border: 2px solid var(--error); background: #fff5f5; }
+.camp-error label { color: var(--error); }
+.missatge-error { margin: .35rem 0 0; color: var(--error); font-weight: 600; font-size: .92rem; }
+.avis-error { background: var(--error-fons); color: var(--error); border-left: 5px solid var(--error); padding: .75rem 1rem; border-radius: var(--radi); margin-bottom: 1.5rem; font-weight: 600; }
+.avis-ok { background: var(--ok-fons); color: var(--ok); border-left: 5px solid var(--ok); padding: .75rem 1rem; border-radius: var(--radi); font-weight: 600; }
+
+/* ===== Taula de resultat ===== */
+.taula-resum { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+.taula-resum th, .taula-resum td { text-align: left; padding: .65rem .75rem; border-bottom: 1px solid var(--gris); }
+.taula-resum th { width: 30%; background: var(--fons); }
